@@ -11,24 +11,24 @@ let types_n = [{
     bad: [],
 }, {
     name: "INTP",
-    ideal: [],
-    great: [],
-    good: [],
-    poor: [],
-    bad: []
+    ideal: ["ENTJ", "ESTJ"],
+    great: ["INFP", "INFJ", "ENFJ", "INTJ", "INTP", "ENFP", "ENTP"],
+    good: ["ISFP", "ESFP", "ISTP", "ESTP"],
+    poor: ["ISFJ", "ESFJ", "ISTJ"],
+    bad: [],
 }, {
     name: "ENTJ",
-    ideal: [],
-    great: [],
-    good: [],
+    ideal: ["INFP", "INTP"],
+    great: ["INFJ", "ENFJ", "INTJ", "ENTJ", "ENFP", "ENTP"],
+    good: ["ISFP", "ESFP", "ISTP", "ESTP", "ISFJ", "ESFJ", "ISTJ", "ESTJ"],
     poor: [],
-    bad: []
+    bad: [],
 }, {
     name: "ENTP",
-    ideal: [],
-    great: [],
-    good: [],
-    poor: [],
+    ideal: ["INFJ", "INTP"],
+    great: ["INFP", "ENFJ", "INTJ", "ENTJ", "INTP", "ENFP", "ENTP"],
+    good: ["ISFP", "ESFP", "ISTP", "ESTP"],
+    poor: ["ISFJ", "ESFJ", "ISTJ", "ESTJ"],
     bad: []
 }, {
     name: "INFJ",
@@ -79,7 +79,7 @@ let types_n = [{
     good: [],
     poor: [],
     bad: []
-},  {
+}, {
     name: "ISTP",
     ideal: [],
     great: [],
@@ -140,7 +140,6 @@ function Calc({ first, second }) {
         return <div className="mt-2 block bg-gray-100 p-2 rounded text-gray-900">Neznámá shoda (není v databázi) 😬</div>
     }
 
-
 }
 
 const Status = ({ first, second }) => (
@@ -172,6 +171,10 @@ const Status = ({ first, second }) => (
             <Calc first={first} second={second} />
             :
             <div className="mt-2 block bg-gray-100 p-2 rounded text-gray-900">Nelze určit shodu 🚫</div>}
+        <div className="text-gray-500 text-xs mt-3 pt-3 border-t-2">
+            <p>Pro výpočet využíváme modelu od Myera Briggse.</p>
+            <p className="font-bold">Toto není vztahové poradenství!</p>
+            </div>
 
     </div>
 )
