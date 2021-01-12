@@ -146,7 +146,7 @@ function Calc({ first, second }) {
 const Status = ({ first, second }) => (
 
 
-    <div className="flex-1 bg-white shadow-lg border-red-400 border-1 p-6 my-5 rounded-xl block">
+    <div className="flex-1 bg-white shadow-lg border-red-400 border-1 p-6 my-5 rounded block">
         <h2 className="text-2xl mb-2">Výsledek</h2>
         {!first ?
             <div className="block p-2 rounded text-gray-400"><MdRadioButtonUnchecked className="flex align-middle"></MdRadioButtonUnchecked> Není vyplněna první osoba</div>
