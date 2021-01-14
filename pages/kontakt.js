@@ -1,23 +1,22 @@
 import Head from 'next/head'
-import Form from '../components/Form'
-import Teaser from '../components/Teaser'
+import ContactContent from '../components/ContactContent'
 import Header from '../components/Header'
 
 export default function Home() {
     return (
-        <div >
+        <div>
             <Head>
-                <title>Test kompatibility partnerů</title>
+                <title>Kontakt | Test kompatibility partnerů</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Header activePage="vypocet" />
+            <Header activePage="kontakt" />
 
-            <Teaser />
+            
 
             <div id="main" className="container mx-auto px-6 mt-10">
-                <div className="w-full h-64 rounded mb-32">
+                <div className="w-full h-64 mb-32">
 
-                    <Form />
+                    <ContactContent />
 
                 </div>
             </div>

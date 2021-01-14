@@ -25,7 +25,7 @@ let types_n = [{
     bad: [],
 }, {
     name: "ENTP",
-    ideal: ["INFJ", "INTP"],
+    ideal: ["INFJ", "INTJ"],
     great: ["INFP", "ENFJ", "INTJ", "ENTJ", "INTP", "ENFP", "ENTP"],
     good: ["ISFP", "ESFP", "ISTP", "ESTP"],
     poor: ["ISFJ", "ESFJ", "ISTJ", "ESTJ"],
@@ -39,32 +39,32 @@ let types_n = [{
     bad: ["ISFP", "ESFP", "ISTP", "ESTP", "ISFJ", "ESFJ", "ISTJ", "ESTJ"],
 }, {
     name: "INFP",
-    ideal: [],
-    great: [],
+    ideal: ["ENFJ", "ENTJ"],
+    great: ["INFP", "INFJ", "INTJ", "INTP", "ENFP", "ENTP"],
     good: [],
     poor: [],
-    bad: []
+    bad: ["ISFP", "ESFP", "ISTP", "ESTP", "ISFJ", "ESFJ", "ISTJ", "ESTJ"],
 }, {
     name: "ENFJ",
-    ideal: [],
-    great: [],
+    ideal: ["INFP", "ISFP"],
+    great: ["INFJ", "INTJ", "INTP", "ENFP", "ENTP", "ENFJ", "ENTJ"],
     good: [],
     poor: [],
-    bad: []
+    bad: ["ESFP", "ISTP", "ESTP", "ISFJ", "ESFJ", "ISTJ", "ESTJ"],
 }, {
     name: "ENFP",
-    ideal: [],
-    great: [],
+    ideal: ["INFJ", "ENFJ"],
+    great: ["INFP", "INTJ", "INTP", "ENFP", "ENTP", "ENTJ"],
     good: [],
     poor: [],
-    bad: []
+    bad: ["ISFP", "ESFP", "ISTP", "ESTP", "ISFJ", "ESFJ", "ISTJ", "ESTJ"],
 }, {
     name: "ISTJ",
-    ideal: [],
-    great: [],
-    good: [],
-    poor: [],
-    bad: []
+    ideal: ["INTP", "ISFP", "ISTP"],
+    great: ["ISFJ", "ESFJ", "ISTJ", "ESTJ"],
+    good: ["ENTJ", "ESFP", "ESTP"],
+    poor: ["INTJ", "ENTP"],
+    bad: ["INFP", "ENFP", "INFJ", "ENFJ"]
 }, {
     name: "ISFJ",
     ideal: [],
@@ -172,7 +172,7 @@ const Status = ({ first, second }) => (
             :
             <div className="mt-2 block bg-gray-100 p-2 rounded text-gray-900">Nelze určit shodu 🚫</div>}
         <div className="text-gray-500 text-xs mt-3 pt-3 border-t-2">
-            <p>Pro výpočet využíváme modelu od Myera Briggse.</p>
+            <p>Pro výpočet využíváme modelu Myer Briggsové.</p>
             <p className="font-bold">Toto není vztahové poradenství!</p>
             </div>
 

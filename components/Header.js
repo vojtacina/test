@@ -1,29 +1,31 @@
 import React, { useEffect, useState } from "react";
+import Link from 'next/link'
 
-const Item = ({ title, active }) => {
+
+const Item = ({ link, title, active }) => {
     return (
-        <div className={"m-4 p-4 rounded " + (active ? "bg-gray-100 text-black font-bold" : "bg-white hover:bg-gray-100 text-gray-800 ")} >
+        <Link href={"" + link}><div className={"m-4 p-4 cursor-pointer rounded " + (active ? "bg-gray-100 text-black font-medium" : "bg-white hover:bg-gray-100 text-gray-800 ")} >
             {title}
-        </div>
+        </div></Link>
     )
 }
 
-const Header = () => {
+const Header = ({ activePage }) => {
 
     const [opened, setOpened] = useState(false)
 
     return (
         <div>
-            <div className="hidden md:flex justify-start bg-white px-6 md:px-24 py-6">
-                <Item title="🔮  Test dle typu osobnosti" active={true} />
-                <Item title="💎  Test dle hodnotového žebříčku" active={false} />
+            <div className="hidden md:flex justify-start bg-white  px-2 sm:px-6 md:px-24 py-6">
+                <Item link="/vypocet" title="✏️  Test dle typu osobnosti" active={activePage === "vypocet" ? true : false} />
+                <Item link="/kontakt" title="✉️  Kontakt" active={activePage === "kontakt" ? true : false} />
             </div>
-            {!opened ? <div className="block md:hidden justify-start bg-white px-6 md:px-24 py-6">
-                <a className="cursor-pointer" onClick={() => setOpened(!opened)}><Item title="⬇ Otevřít menu" active={false} /></a>
-            </div> : <div className="block md:hidden justify-start bg-white px-6 md:px-24 py-6">
-                    <a className="cursor-pointer"  onClick={() => setOpened(!opened)}><Item title="⬆ Zavřít menu" active={false} /></a>
-                    <Item title="🔮  Test dle typu osobnosti" active={true} />
-                    <Item title="💎  Test dle hodnotového žebříčku" active={false} />
+            {!opened ? <div className="block md:hidden justify-start bg-white px-2 sm:px-6 md:px-24 py-6">
+                <a className="cursor-pointer" onClick={() => setOpened(!opened)}><Item title="⬇ Otevřít menu" active={false} link="" /></a>
+            </div> : <div className="block md:hidden justify-start bg-white px-2 sm:px-6 md:px-24 py-6">
+                    <a className="cursor-pointer" onClick={() => setOpened(!opened)}><Item title="⬆ Zavřít menu" active={false} link="" /></a>
+                    <Item link="/vypocet" title="✏️  Test dle typu osobnosti" active={activePage === "vypocet" ? true : false} />
+                    <Item link="/kontakt" title="✉️  Kontakt" active={activePage === "kontakt" ? true : false} />
                 </div>}
 
         </div>
