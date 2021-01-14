@@ -67,53 +67,53 @@ let types_n = [{
     bad: ["INFP", "ENFP", "INFJ", "ENFJ"]
 }, {
     name: "ISFJ",
-    ideal: [],
-    great: [],
-    good: [],
-    poor: [],
-    bad: []
+    ideal: ["ESFP", "ESTP"],
+    great: ["ISFJ", "ESFJ", "ISTJ", "ESTJ"],
+    good: ["ENTJ", "ISFP", "ISTP"],
+    poor: ["INTJ", "INTP", "ENTP"],
+    bad: ["INFP", "ENFP", "INFJ", "ENFJ"]
 }, {
     name: "ESTJ",
-    ideal: [],
-    great: [],
-    good: [],
-    poor: [],
-    bad: []
+    ideal: ["INTP", "ISFP", "ISTP"],
+    great: ["ISFJ", "ESFJ", "ISTJ", "ESTJ"],
+    good: ["ENTJ", "ESFP", "ESTP"],
+    poor: ["INTJ", "ENTP"],
+    bad: ["INFP", "ENFP", "INFJ", "ENFJ"]
 }, {
     name: "ISTP",
-    ideal: [],
+    ideal: ["ENFJ", "ESFJ", "ESTJ"],
     great: [],
-    good: [],
-    poor: [],
-    bad: []
+    good: ["INTJ", "ENTJ", "INTJ", "ENTP", "ISFP", "ISTJ"],
+    poor: ["ISFP", "ESFP", "ISTP", "ESTP"],
+    bad: ["INFP", "ENFP", "INFJ", "ENFJ"]
 }, {
     name: "ISFP",
-    ideal: [],
+    ideal: ["ENJF", "ESFJ", "ESTJ"],
     great: [],
-    good: [],
-    poor: [],
-    bad: []
+    good: ["INTJ", "ENTJ", "INTP", "ENTP", "ISFJ", "ISTJ"],
+    poor: ["ISFP", "ESFP", "ISTP", "ESTP"],
+    bad: ["INFP", "ENFP", "INFJ"]
 }, {
     name: "ESTP",
-    ideal: [],
+    ideal: ["ISFJ", "ISTJ"],
     great: [],
-    good: [],
-    poor: [],
-    bad: []
+    good: ["INTJ", "ENTJ", "INTP", "ENTP"],
+    poor: ["ISFP", "ESFP", "ISTP", "ESTP"],
+    bad: ["INFP", "ENFP", "INFJ", "ENFJ"]
 }, {
     name: "ESFP",
-    ideal: [],
+    ideal: ["ISFJ", "ISTJ"],
     great: [],
-    good: [],
-    poor: [],
-    bad: []
+    good: ["INTJ", "ENTJ", "INTP", "ENTP"],
+    poor: ["ISFP", "ESFP", "ISTP", "ESTP"],
+    bad: ["INFP", "ENFP", "INFJ", "ENFJ"]
 }, {
     name: "ESFJ",
-    ideal: [],
-    great: [],
-    good: [],
-    poor: [],
-    bad: []
+    ideal: ["ISFP", "ISTP"],
+    great: ["ISFJ", "ESFJ", "ISTJ", "ESTJ"],
+    good: ["ENTJ", "ESFP", "ESTP"],
+    poor: ["INTJ", "INTP", "ENTP"],
+    bad: ["INFP", "ENFP", "INFJ", "ENFJ"]
 },]
 
 function Calc({ first, second }) {
