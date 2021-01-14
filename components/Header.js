@@ -10,21 +10,30 @@ const Item = ({ link, title, active }) => {
     )
 }
 
+const Logo = ({ value }) => {
+    return (
+        <Link href={"/"}><div className={"m-4 p-4 cursor-pointer rounded font-bold bg-white text-gray-800 font-serif text-4xl"} >
+            {value}
+        </div></Link>
+    )
+}
+
 const Header = ({ activePage }) => {
 
     const [opened, setOpened] = useState(false)
 
     return (
         <div>
-            <div className="hidden md:flex justify-start bg-white  px-2 sm:px-6 md:px-24 py-6">
-                <Item link="/vypocet" title="✏️  Test dle typu osobnosti" active={activePage === "vypocet" ? true : false} />
+            <div className="hidden md:flex justify-start bg-white items-center	 px-2 sm:px-6 md:px-24 py-6">
+                <Logo value="👧💘👨‍🦱"></Logo>
+                <Item link="/" title="✏️  Test dle typu osobnosti" active={activePage === "vypocet" ? true : false} />
                 <Item link="/kontakt" title="✉️  Kontakt" active={activePage === "kontakt" ? true : false} />
             </div>
             {!opened ? <div className="block md:hidden justify-start bg-white px-2 sm:px-6 md:px-24 py-6">
-                <a className="cursor-pointer" onClick={() => setOpened(!opened)}><Item title="⬇ Otevřít menu" active={false} link="" /></a>
+                <a className="cursor-pointer flex items-center" onClick={() => setOpened(!opened)}><Logo value="‍👩‍❤️‍👨"></Logo><Item title="⬇ Otevřít menu" active={false} link="" /></a>
             </div> : <div className="block md:hidden justify-start bg-white px-2 sm:px-6 md:px-24 py-6">
-                    <a className="cursor-pointer" onClick={() => setOpened(!opened)}><Item title="⬆ Zavřít menu" active={false} link="" /></a>
-                    <Item link="/vypocet" title="✏️  Test dle typu osobnosti" active={activePage === "vypocet" ? true : false} />
+                    <a className="cursor-pointer flex items-center" onClick={() => setOpened(!opened)}><Logo value="‍👩‍❤️‍👨"></Logo><Item title="⬆ Zavřít menu" active={false} link="" /></a>
+                    <Item link="/" title="✏️  Test dle typu osobnosti" active={activePage === "vypocet" ? true : false} />
                     <Item link="/kontakt" title="✉️  Kontakt" active={activePage === "kontakt" ? true : false} />
                 </div>}
 
