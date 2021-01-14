@@ -81,11 +81,11 @@ let types_n = [{
     bad: ["INFP", "ENFP", "INFJ", "ENFJ"]
 }, {
     name: "ISTP",
-    ideal: ["ENFJ", "ESFJ", "ESTJ"],
+    ideal: ["ESFJ", "ESTJ"],
     great: [],
     good: ["INTJ", "ENTJ", "INTJ", "ENTP", "ISFP", "ISTJ"],
     poor: ["ISFP", "ESFP", "ISTP", "ESTP"],
-    bad: ["INFP", "ENFP", "INFJ", "ENFJ"]
+    bad: ["ENFJ", "INFP", "ENFP", "INFJ", "ENFJ"]
 }, {
     name: "ISFP",
     ideal: ["ENJF", "ESFJ", "ESTJ"],
